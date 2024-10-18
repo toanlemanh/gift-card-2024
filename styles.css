@@ -70,7 +70,7 @@ body {
   background: linear-gradient(to left,
    #e7e7e7, #ffffff 30%);
 }
-.flower {
+.flower-card {
   width: 100%;
   position: absolute;
   bottom: 30px;
@@ -101,4 +101,10 @@ body {
   border: 0px solid;
   background-color: #fff0fa;
   box-shadow: -1px -1px 10px 5px #fff0fa;
+}
+.d-none {
+   display: none;
+}
+.d-flex {
+  display: flex;
 }

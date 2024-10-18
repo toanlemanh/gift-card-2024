@@ -12,24 +12,37 @@
     <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-    <div class="card">
+    <div id="card" class="card">
         <div class="outside">
           <div class="front">
             <p>20/10</p>
-            <div class="flower">
-              <img src="9660940.jpg" alt="" class="img">
+            <div class="flower-card">
+              <img src="./media/img/card.jpg" alt="" class="img">
             </div>
           </div>
           <div class="back"></div>
         </div>
         <div class="inside">
-          <p>Nhân ngày 20/10, em chúc chị luôn xinh đẹp, vui vẻ và tràn đầy hạnh phúc. Hy vọng hôm nay và mọi ngày sau này, chị sẽ luôn mỉm cười thật tươi như nắng mai nhé!</p>
-          <button class="confetti">Yay &#127881</button>
+          <p>Nhân ngày 20/10, em chúc cô luôn xinh đẹp, vui vẻ và tràn đầy hạnh phúc. Chúc cô luôn giữ được sự nhiệt huyết, cái tâm cái tình với sự nghiệp trồng người!</p>
+          <button class="confetti">Bấm vào đi &#127881</button>
         </div>
       </div>
+    <!-- <embed name="myMusic" src="./media/audio/ceremony.mp3" type="audio/midi" autostart="true" Hidden="true" loop="true"></embed>  -->
+    <audio id="song" loop>
+      <source src="./media/audio/ceremony.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div id="landscape" class="d-none">
+      <img alt="bodoquyenluc" src="./media/img/bo-doi-quyen-luc.jpg" />
     </div>
-
+  
     <script src="./script.js"></script>
+    <script>
+      window.addEventListener('click', () => {
+        document.getElementById('song').play();
+        document.getElementById('song').loop();
+      })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </body>
 </html>
