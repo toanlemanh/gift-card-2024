@@ -24,25 +24,23 @@ document.getElementsByClassName("confetti")[0].addEventListener("click", () => {
     }());
     (function createOverlayImage() {
       var box = document.getElementById("landscape");
-      // box.classList.remove("d-none");
+      box.classList.remove("d-none");
+      moveToRight();
       function moveToRight() {
         const div = document.getElementById('card');
         
-        document.body.style.backgroundImage = "url('./media/img/bo-doi-quyen-luc.jpg')"; // Replace with your image URL
-        document.body.style.backgroundSize = "contain"; // Cover the entire background
-        document.body.style.backgroundPosition = "center"; // Center the image
-        document.body.style.backgroundRepeat = "no-repeat"; 
         // Get the width of the window and the div
-        // const windowWidth = window.innerWidth;
-        // const divWidth = div.offsetWidth;
+        const windowWidth = window.innerWidth;
+        const divWidth = div.offsetWidth;
         
-        // // Calculate the distance the div should move (to the right edge minus its width)
-        // const moveDistance = windowWidth - divWidth;
+        //  Calculate the distance the div should move (to the right edge minus its width)
+        const moveDistance = windowWidth - divWidth;
   
-        // // Apply transform to move the div smoothly to the right edge
-        // div.style.transform = `translateX(${moveDistance}px)`
+        //  Apply transform to move the div smoothly to the right edge
+        div.style.transform = `translateX(${divWidth}px)`;
+        setTimeout( () => {
+           div.classList.add("d-none")
+        }, 3000) 
       }
-     moveToRight();
     }());
-    
 });

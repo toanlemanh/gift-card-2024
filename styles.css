@@ -108,3 +108,8 @@ body {
 .d-flex {
   display: flex;
 }
+#landscape {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
