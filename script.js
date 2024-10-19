@@ -44,3 +44,8 @@ document.getElementsByClassName("confetti")[0].addEventListener("click", () => {
       }
     }());
 });
+
+var ghpages = require('gh-pages');
+
+ghpages.publish('dist', function(err) {});
+
